@@ -1,0 +1,1 @@
+Repo for erasmus classes about RSI - API requests from Python Flusk
