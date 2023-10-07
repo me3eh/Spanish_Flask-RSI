@@ -1,7 +1,7 @@
 import requests
 BASE = "http://localhost:5000"
 # create first resource
-response = requests.post ( BASE + "/products/" , json = {"name": "123",
+response = requests.post ( BASE + "/productos/" , json = {"name": "audi",
     "height": 144,
     "age": 21
 })
@@ -11,5 +11,4 @@ print ( '' )
 print ( ' we enter tomato ' )
 print ( 'status: ' + str ( response.status_code ))
 print ( 'header: ' + str ( response.headers ))
-print ( 'JSON: ' + str ( response))
-print ( 'JSON: ' + str(response))
+print ( 'JSON: ' + str(response.json()))

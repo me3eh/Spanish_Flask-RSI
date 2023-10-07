@@ -99,9 +99,10 @@ def error_400():
 # POST: introducimos un nuevo elemento
 @app.route("/productos/", methods=["POST"])
 def add_product():
+    print("poszlo")
     if request_incompleta(request):
         return error_400()
-
+    print("poszlo 2")
     name = request.json['name']
     height = request.json['height']
     age = request.json['age']
@@ -112,7 +113,7 @@ def add_product():
     db.session.commit()
 
     cabeceras = {'Location': url_for('add_product')+str(new_human.id)}
-    return {'estado': 'Recurso creado correctamente'}, 201, cabeceras
+    return {"estado": "Recurso creado correctamente"}, 201, cabeceras
 
 
 
